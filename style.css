@@ -1,0 +1,91 @@
+body{
+        font-family: "Roboto", sans-serif;
+    }
+
+h1{
+color:rgb(10, 150, 10);
+margin-top: 10px;
+}
+
+.RECIPE-HEADER{
+    display: flex ;
+    align-items: center;
+    gap:50px;
+    border: 6px solid olivedrab;
+    border-radius: 5px;
+}
+
+.RECIPE-HEADER img {
+    transition: transform .5s ease;
+}
+
+.RECIPE-HEADER img:hover {
+   transform:scale(1.23);
+}
+
+.RECIPE-HEADER div p{
+    padding: 0 40px 0 50px;
+    
+
+}
+
+.RECIPE-BUTTON{
+
+    background-color: rgb(144, 218, 33);
+    color:white;
+    border-color: orange;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    cursor:pointer;
+    margin-top: 60px;
+}
+
+.RECIPE-INGREDIENTS{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+    
+}
+
+.INGREDIENTS, .INSTRUCTIONS{
+  border: 6px solid rgb(172, 129, 49);
+  padding: 50px 50px 50px 200px;
+  margin-inline: 10px;
+  border-radius: 5px;
+}
+
+
+@keyframes appear{
+    from{
+        opacity: 0; 
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+    
+.RECIPE-HEADER{
+    animation: appear 2s ease;
+}
+
+@media (max-width:600px) {
+    .RECIPE-HEADER{
+        flex-direction: column;
+        text-align: center;
+    }
+
+.RECIPE-HEADER div p{
+    padding: 0 15px 0 15px;
+    
+
+}
+
+.RECIPE-INGREDIENTS{
+    grid-template-columns: 1fr;
+}
+}
+
+
+
